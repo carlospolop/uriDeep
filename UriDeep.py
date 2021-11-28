@@ -1,3 +1,4 @@
+#!/bin/python3
 import argparse
 import sys
 import signal
@@ -12,8 +13,9 @@ import time
 
 DESCRIPTION = ('UriDeep: Tool based on machine learning to create amazing fake domains using confusables. Some domains can deceive IDN policies')
 
-CONFUSABLES_FULL = "./data/deepDiccConfusables.txt"
-CONFUSABLES_LIGHT = "./data/confusables-table-light.txt"
+FILE_PATH = os.path.dirname(os.path.realpath(__file__))
+CONFUSABLES_FULL = f"{FILE_PATH}/data/deepDiccConfusables.txt"
+CONFUSABLES_LIGHT = f"{FILE_PATH}/data/confusables-table-light.txt"
 
 def banner(delay_time=1):
     print("""
